@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  let num1= 1;
+  let num2= 1;
+  let num3= num1 + num2;
+  let sout = "";
+
+  for(let i=1; i<=20; i++){
+    num3 = num1 + num2;
+    num1 = num2;
+    num2 = num3;
+    sout += num3 + " , ";
+  }
+  document.write("1, 1, "+ sout);
+</script>
+</body>
+</html>

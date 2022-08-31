@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="numbers" id="sNguyen">
+    <button type="button" onclick="kiemTra()">Kiểm tra</button>
+
+  <script>
+    function kiemTra() {
+      let sN = parseInt(document.getElementById('sNguyen').value);
+      let count = 0;
+      let n = 2;
+      let check = true;
+      let sout = "";
+      // for(let number=1; number<=10000;number++) {
+      //     check = true;
+      //     for (let i = 2; i <= number-1; i++) {
+      //         if (number % i == 0) {
+      //             check = false;
+      //             break;
+      //         }
+      //     }
+      //     if (check) {
+      //         sout += number + " , ";
+      //         count++;
+      //         if(count >= sN){
+      //             break;
+      //         }
+      //     }
+      //     n++;
+      //   }
+      // document.write(sout);
+      // }
+        while (count < sN){
+            for (let i=2; i<=n-1; i++){
+                check = true;
+                if(n%i == 0){
+                    check = false;
+                    break;
+                }
+            }
+            if(check){
+                sout += n + " , ";
+                count++;
+            }
+            n++;
+        }
+        document.write(sout);
+
+    }
+  </script>
+</body>
+</html>

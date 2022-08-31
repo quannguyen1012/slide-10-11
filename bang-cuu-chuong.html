@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    table{
+        border: 1px solid black;
+        border-collapse:collapse;
+    }
+    td{
+        border:1px solid black;
+    }
+</style>
+<body>
+    <h2>Bảng cửu chương</h2>
+
+    <script>
+      let sout;
+      sout = "<table>"
+        for(let i=1; i<=10; i++){
+        sout += "<tr>";
+            for(let j=1; j<=10; j++){
+                sout += "<td>" + i + "x" + j + "=" + (i * j) + "</td>";
+            }
+        sout += "</tr>";
+        }
+        sout += "</table>";
+        document.write(sout);
+
+    </script>
+
+</body>
+</html>

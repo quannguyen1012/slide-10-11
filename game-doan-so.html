@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h4>Game đoán số</h4>
+  <button type="button" onclick="choi()">bắt đầu</button>
+  <input type="number" id="banDoan" name="numrandom" />
+    <h5>máy đoán:</h5>
+    <span id="mayDoan"></span>
+
+    <p id="kq"></p>
+
+<script>
+    let count = 0;
+    let mayDoan = Math.floor(Math.random() * 100);
+    function choi() {
+        count++;
+        let banDoan1 = parseInt(document.getElementById("banDoan").value);
+        if(count < 3){
+
+            if(mayDoan == banDoan1){
+                alert('bạn đoán đúng');
+            }else if(mayDoan > banDoan1){
+                alert('> bạn đoán');
+            }else if(mayDoan < banDoan1) {
+                alert('< bạn đoán');
+            }
+        }else {
+            alert("bạn đã hết lượt");
+        }
+    }
+
+</script>
+</body>
+</html>
